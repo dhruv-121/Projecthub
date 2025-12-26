@@ -1,0 +1,521 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scrollbar-width: thin;          
+  scrollbar-color: #2563EB #F0F7FF;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px; /* scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: #F0F7FF;  /* track color */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2563EB; /* thumb color */
+  border-radius: 10px;       /* rounded edges */
+  border: 2px solid #F0F7FF; /* space around thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #1e40af;  /* hover effect */
+}
+
+/* Header */
+.header {
+  background-color: #0f172a;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+
+/* Container */
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;   
+}
+
+
+/* Logo Image */
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Center Name */
+.site-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-name h2 {
+  color: #F8FAFC;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/*menubar*/
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* Navigation */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+
+.hero {
+  height: 90vh;
+  background-image: url("hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* Dark overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color:  #F8FAFC;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #2563EB;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*misson*/
+.mission {
+  padding: 80px 20px;
+  background-color: #F0F7FF;
+}
+
+.mission-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Heading */
+.mission-heading {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 60px;
+  color: #2563EB;
+}
+
+/* Rows */
+.mission-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* Reverse row */
+.mission-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image */
+.mission-img {
+  flex: 1;
+}
+
+.mission-img img {
+  width: 100%;
+  max-width: 420px;
+  height: 200px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Text */
+.mission-text {
+  flex: 1;
+}
+
+.mission-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+
+/*cards*/
+.categories {
+ min-height: 100vh;          
+  padding: 80px 20px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.categories-heading {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #2563EB;
+}
+
+/* Cards layout */
+.categories-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+/* Card */
+.category-card {
+  background-color:  #1E40AF;
+  border-radius: 14px;
+  min-height: 420px; 
+  padding: 30px; 
+  box-shadow: 0 10px 25px rgb(0, 55, 80);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card heading */
+.category-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color:  #38BDF8;
+  text-align: center;
+}
+
+/* Scrollable list */
+.project-list {
+  list-style: none;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* List items */
+.project-list li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #F8FAFC;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Optional scrollbar styling */
+.project-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-list::-webkit-scrollbar-thumb {
+  background-color: #94a3b8;
+  border-radius: 10px;
+}
+
+/*Enquiry*/
+.enquiry {
+  padding: 80px 20px;
+  background-color: #F0F7FF;
+}
+
+.enquiry-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Heading */
+.enquiry-heading {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 50px;
+  color: #2563EB;
+}
+
+/* Content layout */
+.enquiry-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left info */
+.enquiry-info {
+  flex: 1;
+}
+
+.enquiry-info p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.enquiry-info ul {
+  list-style: none;
+}
+
+.enquiry-info li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+/* Right form */
+.enquiry-form {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.enquiry-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  outline: none;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: #38bdf8;
+}
+
+.enquiry-form button {
+  padding: 12px;
+  background-color: white;
+  color: #2563EB;
+  font-size: 16px;
+  border: 2px solid #2563EB;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.enquiry-form button:hover {
+  background-color: #2563EB;
+  color: white;
+}
+
+/*responsive*/
+/* ===============================
+   RESPONSIVE CSS
+================================ */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .navbar ul {
+    gap: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  /* Mission */
+  .mission-row {
+    gap: 30px;
+  }
+
+  /* Categories */
+  .categories-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  /* Enquiry */
+  .enquiry-content {
+    gap: 30px;
+  }
+}
+
+
+/* ===============================
+   Mobile (max-width: 768px)
+================================ */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  /* ===== MISSION ===== */
+  .mission-row,
+  .mission-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ===== CATEGORIES ===== */
+  .categories {
+    min-height: auto;
+  }
+
+  .categories-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* ===== ENQUIRY ===== */
+  .enquiry-content {
+    flex-direction: column;
+  }
+
+  .enquiry-form {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 1;   
+  }
+
+  .navbar ul {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 240px;              
+    height: calc(100vh - 500px);
+    background-color: #0f172a;
+    display: none;
+    flex-direction: column;
+    padding-top: 20px;
+    z-index: 3000;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar ul li {
+    padding: 15px 20px;
+    text-align: left;
+  }
+}
+
+
+
+/* ===============================
+   Small Mobile (max-width: 480px)
+================================ */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .mission-heading,
+  .categories-heading,
+  .enquiry-heading {
+    font-size: 26px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}

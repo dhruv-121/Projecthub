@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <!-- Left: Image -->
+        <div class="logo">
+          <img src="logo.jpg" alt="img" />
+        </div>
+
+        <!-- Center: Name -->
+        <div class="site-name">
+          <h2>Project Hub</h2>
+        </div>
+
+        <div class="menu-toggle">
+          <i class="fa-solid fa-list"></i>
+        </div>
+
+        <!-- Right: Navigation -->
+        <nav class="navbar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Project Hub</h1>
+          <p>
+            Collection of more projects that are based on whole languages and
+            new problem-solving. New technology and fundamentals Projects with
+            source code with a whole type of repository Documentation and base
+            paper or research paper.
+          </p>
+        </div>
+      </section>
+
+      <section class="mission">
+        <div class="mission-container">
+          <!-- Heading -->
+          <h2 class="mission-heading">Project Mission</h2>
+
+          <!-- Row 1 -->
+          <div class="mission-row">
+            <div class="mission-img">
+              <img src="mission1.jpg" alt="Project Development" />
+            </div>
+            <div class="mission-text">
+              <p>
+                Our mission is to provide high-quality projects based on new
+                technologies and core fundamentals, helping students gain
+                real-world experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="mission-row reverse">
+            <div class="mission-text">
+              <p>
+                We encourage learners to complete projects by themselves,
+                improve problem-solving skills, and grow confidently in the IT
+                industry.
+              </p>
+            </div>
+            <div class="mission-img">
+              <img src="mission2.jpg" alt="Learning and Growth" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories">
+        <h2 class="categories-heading">Project Categories</h2>
+
+        <div class="categories-container">
+          <!-- Card 1 -->
+          <div class="category-card">
+            <h3>Web Development</h3>
+            <ul class="project-list">
+              <li>Portfolio Website</li>
+              <li>E-Commerce Website</li>
+              <li>Blog Website</li>
+              <li>Landing Page</li>
+              <li>Admin Dashboard</li>
+              <li>Responsive Website</li>
+              <li>Form Validation</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="category-card">
+            <h3>Programming</h3>
+            <ul class="project-list">
+              <li>Student Management System</li>
+              <li>Library Management</li>
+              <li>Banking System</li>
+              <li>Quiz Application</li>
+              <li>Calculator</li>
+              <li>File Handling Project</li>
+              <li>Employee Record System</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="category-card">
+            <h3>Database Projects</h3>
+            <ul class="project-list">
+              <li>Hospital Database</li>
+              <li>College Database</li>
+              <li>Inventory Management</li>
+              <li>Attendance System</li>
+              <li>Customer Record System</li>
+              <li>Online Voting System</li>
+              <li>Sales Database</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="enquiry">
+        <div class="enquiry-container">
+          <!-- Top Center Heading -->
+          <h2 class="enquiry-heading">Project Enquiry</h2>
+
+          <div class="enquiry-content">
+            <!-- Left Info -->
+            <div class="enquiry-info">
+              <p>
+                If you need project details, source code, or guidance, feel free
+                to contact us. We support students with academic and
+                professional projects.
+              </p>
+
+              <ul>
+                <li>✔ Final Year Projects</li>
+                <li>✔ Mini & Major Projects</li>
+                <li>✔ Source Code Support</li>
+                <li>✔ Project Guidance</li>
+              </ul>
+            </div>
+
+            <!-- Right Form -->
+            <div class="enquiry-form">
+              <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <input type="text" placeholder="Project Category" />
+                <textarea placeholder="Your Enquiry" rows="4"></textarea>
+                <button type="submit">Send Enquiry</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+    <script>
+  const toggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".navbar ul");
+
+  toggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
+</html>
